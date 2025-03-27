@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:vordic_user/core/theme/app_palette.dart';
 
