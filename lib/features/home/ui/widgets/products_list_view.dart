@@ -8,7 +8,7 @@ productsListView({required context,required title}) => Column(
             children: [
               Text(
                 title,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 32,
                   fontWeight: FontWeight.bold,
                 ),

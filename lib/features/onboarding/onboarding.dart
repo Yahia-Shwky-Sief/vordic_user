@@ -74,7 +74,7 @@ class OnBoarding extends StatelessWidget {
                       children: [
                         MaterialButton(
                           onPressed: () => context.pushReplacementTransition(
-                            child: SignIn(),
+                            child: const SignIn(),
                             type: PageTransitionType.fade,
                           ),
                           child: const Row(

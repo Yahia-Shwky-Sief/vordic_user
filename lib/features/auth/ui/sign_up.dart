@@ -12,7 +12,7 @@ class SignUp extends StatelessWidget {
   Widget build(BuildContext context) {
     TextEditingController emailController = TextEditingController();
     TextEditingController passwordController = TextEditingController();
-    final _formKey = GlobalKey<FormState>();
+    final formKey = GlobalKey<FormState>();
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -45,7 +45,7 @@ class SignUp extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Form(
-                key: _formKey,
+                key: formKey,
                 child: Column(
                   children: [
                     textFormField(
@@ -84,7 +84,7 @@ class SignUp extends StatelessWidget {
                         color: AppPalette.whiteColor,
                         textColor: AppPalette.backgroundColor,
                         onPressed: () {
-                          if (_formKey.currentState!.validate()) {
+                          if (formKey.currentState!.validate()) {
                             // Process data.
                           }
                         },
@@ -99,7 +99,7 @@ class SignUp extends StatelessWidget {
             MaterialButton(
               onPressed: () {
                 context.pushTransition(
-                    type: PageTransitionType.fade, child: SignIn());
+                    type: PageTransitionType.fade, child: const SignIn());
               },
               child: const Text(
                 'Have an account? Sign in',
