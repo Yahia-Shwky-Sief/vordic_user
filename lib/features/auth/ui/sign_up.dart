@@ -3,7 +3,7 @@ import 'package:page_transition/page_transition.dart';
 import 'package:vordic_user/core/theme/app_palette.dart';
 import 'package:vordic_user/core/widgets/logo.dart';
 import 'package:vordic_user/features/auth/ui/sign_in.dart';
-import 'package:vordic_user/features/auth/ui/widgets/text_form_field.dart';
+import 'package:vordic_user/core/widgets/text_form_field.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({super.key});

@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:vordic_user/core/theme/app_palette.dart';
 import 'package:vordic_user/core/widgets/logo.dart';
 import 'package:vordic_user/features/auth/ui/sign_up.dart';
-import 'package:vordic_user/features/auth/ui/widgets/text_form_field.dart';
+import 'package:vordic_user/core/widgets/text_form_field.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:vordic_user/features/navigation_bar/navigation_bar.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({super.key});
@@ -11,7 +12,7 @@ class SignIn extends StatelessWidget {
   Widget build(BuildContext context) {
     TextEditingController emailController = TextEditingController();
     TextEditingController passwordController = TextEditingController();
-    final _formKey = GlobalKey<FormState>();
+    final formKey = GlobalKey<FormState>();
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -44,7 +45,7 @@ class SignIn extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Form(
-                key: _formKey,
+                key: formKey,
                 child: Column(
                   children: [
                     textFormField(
@@ -92,9 +93,9 @@ class SignIn extends StatelessWidget {
                         color: AppPalette.whiteColor,
                         textColor: AppPalette.backgroundColor,
                         onPressed: () {
-                          if (_formKey.currentState!.validate()) {
-                            // Process data.
-                          }
+                          context.pushReplacementTransition(
+                              type: PageTransitionType.fade,
+                              child: const NavigationExample());
                         },
                         child: const Text('Sign in'),
                       ),
@@ -107,7 +108,7 @@ class SignIn extends StatelessWidget {
             MaterialButton(
               onPressed: () {
                 context.pushTransition(
-                    type: PageTransitionType.fade, child: SignUp());
+                    type: PageTransitionType.fade, child: const SignUp());
               },
               child: const Text(
                 'Don\'t have an account? Sign up',

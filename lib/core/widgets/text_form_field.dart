@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vordic_user/core/theme/app_palette.dart';
 
 Widget textFormField({
   required String hintText,
@@ -16,6 +17,14 @@ Widget textFormField({
       validator: validator,
       decoration: InputDecoration(
         hintText: hintText,
+        
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+          borderSide: const BorderSide(
+            color: AppPalette.whiteColor,
+            width: 2,
+          ),
+        ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
         ),

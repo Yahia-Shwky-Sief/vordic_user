@@ -5,7 +5,14 @@ class AppTheme {
   static final darkThemeMode = ThemeData.dark().copyWith(
     scaffoldBackgroundColor: AppPalette.backgroundColor,
     appBarTheme: const AppBarTheme(
-      backgroundColor: AppPalette.backgroundColor,
+      backgroundColor: Color.fromRGBO(24, 24, 32, 1),
+      elevation: 0,
+      scrolledUnderElevation: 0,
+    ),
+    textSelectionTheme: const TextSelectionThemeData(
+      selectionColor: AppPalette.whiteColor,
+      cursorColor: AppPalette.whiteColor,
+      selectionHandleColor: AppPalette.whiteColor,
     ),
   );
 }
