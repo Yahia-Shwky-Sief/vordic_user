@@ -35,15 +35,19 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
             label: 'Home',
           ),
           NavigationDestination(
-            icon: Icon(Icons.search),
-            label: 'Search',
+            icon: Icon(Icons.category_outlined),
+            selectedIcon: Icon(Icons.category),
+            label: 'Categories',
           ),
           NavigationDestination(
             icon: FaIcon(FontAwesomeIcons.cartShopping),
+            selectedIcon: FaIcon(FontAwesomeIcons.cartShopping),
             label: 'Cart',
           ),
           NavigationDestination(
-            icon: Icon(Icons.person),
+            icon: Icon(Icons.person_outline),
+            selectedIcon: Icon(Icons.person),
+
             label: 'Profile',
           ),
         ],
