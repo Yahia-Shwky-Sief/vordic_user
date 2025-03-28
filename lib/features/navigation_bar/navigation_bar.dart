@@ -6,14 +6,14 @@ import 'package:vordic_user/features/home/ui/home.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:vordic_user/features/profile/ui/profile.dart';
 
-class NavigationExample extends StatefulWidget {
-  const NavigationExample({super.key});
+class NavigationBarScreen extends StatefulWidget {
+  const NavigationBarScreen({super.key});
 
   @override
-  State<NavigationExample> createState() => _NavigationExampleState();
+  State<NavigationBarScreen> createState() => _NavigationBarScreenState();
 }
 
-class _NavigationExampleState extends State<NavigationExample> {
+class _NavigationBarScreenState extends State<NavigationBarScreen> {
   int currentPageIndex = 0;
 
   @override

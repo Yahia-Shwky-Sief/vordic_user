@@ -16,12 +16,7 @@ class SignUp extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Hero(
-          tag: 'logo',
-          child: Material(
-            child: logo(fontSize: 28),
-          ),
-        ),
+        title:  logo(fontSize: 28),
       ),
       body: SingleChildScrollView(
         child: Column(

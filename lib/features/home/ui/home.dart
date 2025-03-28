@@ -11,7 +11,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  
   TextEditingController controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -20,12 +19,7 @@ class _HomeState extends State<Home> {
         children: [
           AppBar(
             automaticallyImplyLeading: false,
-            title: Hero(
-              tag: 'logo',
-              child: Material(
-                child: logo(fontSize: 28),
-              ),
-            ),
+            title: logo(fontSize: 28),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -44,7 +38,7 @@ class _HomeState extends State<Home> {
           const SizedBox(height: 20),
           const AdsBanner(),
           const SizedBox(height: 20),
-         Padding(
+          Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
               children: [

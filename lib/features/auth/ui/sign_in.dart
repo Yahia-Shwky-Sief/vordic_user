@@ -16,12 +16,7 @@ class SignIn extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Hero(
-          tag: 'logo',
-          child: Material(
-            child: logo(fontSize: 28),
-          ),
-        ),
+        title: logo(fontSize: 28),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -95,7 +90,7 @@ class SignIn extends StatelessWidget {
                         onPressed: () {
                           context.pushReplacementTransition(
                               type: PageTransitionType.fade,
-                              child: const NavigationExample());
+                              child: const NavigationBarScreen());
                         },
                         child: const Text('Sign in'),
                       ),

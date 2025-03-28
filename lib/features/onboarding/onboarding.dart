@@ -38,12 +38,7 @@ class OnBoarding extends StatelessWidget {
             ),
             Positioned(
               top: 20,
-              child: Hero(
-                tag: 'logo',
-                child: Material(
-                  child: logo(fontSize: 40),
-                ),
-              ),
+              child: logo(fontSize: 40),
             ),
             Positioned(
               bottom: 40,
@@ -75,6 +70,8 @@ class OnBoarding extends StatelessWidget {
                         MaterialButton(
                           onPressed: () => context.pushReplacementTransition(
                             child: const SignIn(),
+                            duration: Duration(milliseconds: 500),
+                            curve: Curves.easeInOut,
                             type: PageTransitionType.fade,
                           ),
                           child: const Row(
