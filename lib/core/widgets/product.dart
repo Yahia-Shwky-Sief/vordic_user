@@ -23,9 +23,9 @@ product() => SizedBox(
                 height: 150,
               ),
             ),
-            Text(
+            const Text(
               'Item',
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 24,
                 color: Colors.white,
               ),

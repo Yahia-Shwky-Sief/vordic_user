@@ -4,6 +4,7 @@ import 'package:vordic_user/core/theme/app_palette.dart';
 class AppTheme {
   static final darkThemeMode = ThemeData.dark().copyWith(
     scaffoldBackgroundColor: AppPalette.backgroundColor,
+    primaryColor: AppPalette.greyColor,
     appBarTheme: const AppBarTheme(
       backgroundColor: Color.fromRGBO(24, 24, 32, 1),
       elevation: 0,

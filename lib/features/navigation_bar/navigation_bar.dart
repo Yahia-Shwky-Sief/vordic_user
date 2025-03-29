@@ -3,7 +3,6 @@ import 'package:vordic_user/core/theme/app_palette.dart';
 import 'package:vordic_user/features/cart/ui/cart.dart';
 import 'package:vordic_user/features/categories/ui/categories.dart';
 import 'package:vordic_user/features/home/ui/home.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:vordic_user/features/profile/ui/profile.dart';
 
 class NavigationBarScreen extends StatefulWidget {
@@ -26,34 +25,31 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
             currentPageIndex = index;
           });
         },
-        indicatorColor: AppPalette.greyColor,
+        indicatorColor: AppPalette.transparentColor,
         selectedIndex: currentPageIndex,
         destinations: const <Widget>[
           NavigationDestination(
-            selectedIcon: Icon(Icons.home),
             icon: Icon(Icons.home_outlined),
+            selectedIcon: Icon(Icons.home, color: AppPalette.whiteColor),
             label: 'Home',
           ),
           NavigationDestination(
             icon: Icon(Icons.category_outlined),
-            selectedIcon: Icon(Icons.category),
+            selectedIcon: Icon(Icons.category, color: AppPalette.whiteColor),
             label: 'Categories',
           ),
           NavigationDestination(
             icon: ImageIcon(
-              AssetImage('assets/icons/shopping-cart-outlined.png'),
-              color: AppPalette.greyColor,
-            ),
+                AssetImage('assets/icons/shopping-cart-outlined.png')),
             selectedIcon: ImageIcon(
               AssetImage('assets/icons/shopping-cart.png'),
-              color: AppPalette.greyColor,
+              color: AppPalette.whiteColor,
             ),
             label: 'Cart',
           ),
-
           NavigationDestination(
             icon: Icon(Icons.person_outline),
-            selectedIcon: Icon(Icons.person),
+            selectedIcon: Icon(Icons.person, color: AppPalette.whiteColor),
             label: 'Profile',
           ),
         ],
