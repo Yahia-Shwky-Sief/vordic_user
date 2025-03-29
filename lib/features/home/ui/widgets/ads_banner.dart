@@ -15,55 +15,35 @@ class _AdsBannerState extends State<AdsBanner> {
       children: [
         SizedBox(
           height: 200,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: PageView(
-              controller: PageController(
-                initialPage: pageIndex,
-              ),
-              onPageChanged: (pageChanged) {
-                setState(() {
-                  pageIndex = pageChanged;
-                });
-              },
-              physics: const BouncingScrollPhysics(),
-              scrollDirection: Axis.horizontal,
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    image: const DecorationImage(
-                      image: NetworkImage(
-                        'https://picsum.photos/720/1280',
-                      ),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    image: const DecorationImage(
-                      image: NetworkImage(
-                        'https://picsum.photos/720/1280',
-                      ),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    image: const DecorationImage(
-                      image: NetworkImage(
-                        'https://picsum.photos/720/1280',
-                      ),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-              ],
+          child: PageView.builder(
+            controller: PageController(
+              initialPage: pageIndex,
             ),
+            onPageChanged: (pageChanged) {
+              //Todo: Remove setState and use a provider or a state management solution
+              setState(() {
+                pageIndex = pageChanged;
+              });
+            },
+            physics: const BouncingScrollPhysics(),
+            scrollDirection: Axis.horizontal,
+            itemCount: 3,
+            itemBuilder: (BuildContext context, int index) {
+              return Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    image: const DecorationImage(
+                      image: NetworkImage(
+                        'https://picsum.photos/720/1280',
+                      ),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              );
+            },
           ),
         ),
         const SizedBox(height: 10),
