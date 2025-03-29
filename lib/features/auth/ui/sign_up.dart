@@ -10,6 +10,7 @@ class SignUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController usernameController = TextEditingController();
     TextEditingController emailController = TextEditingController();
     TextEditingController passwordController = TextEditingController();
     final formKey = GlobalKey<FormState>();
@@ -43,6 +44,19 @@ class SignUp extends StatelessWidget {
                 key: formKey,
                 child: Column(
                   children: [
+                    textFormField(
+                      hintText: 'Username',
+                      controller: usernameController,
+                      keyboardType: TextInputType.emailAddress,
+                      obscureText: false,
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'Email is required';
+                        }
+                        return null;
+                      },
+                    ),
+                    const SizedBox(height: 10),
                     textFormField(
                       hintText: 'Email',
                       controller: emailController,
