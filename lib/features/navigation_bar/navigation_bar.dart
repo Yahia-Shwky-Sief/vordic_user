@@ -40,14 +40,20 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
             label: 'Categories',
           ),
           NavigationDestination(
-            icon: FaIcon(FontAwesomeIcons.cartShopping),
-            selectedIcon: FaIcon(FontAwesomeIcons.cartShopping),
+            icon: ImageIcon(
+              AssetImage('assets/icons/shopping-cart-outlined.png'),
+              color: AppPalette.greyColor,
+            ),
+            selectedIcon: ImageIcon(
+              AssetImage('assets/icons/shopping-cart.png'),
+              color: AppPalette.greyColor,
+            ),
             label: 'Cart',
           ),
+
           NavigationDestination(
             icon: Icon(Icons.person_outline),
             selectedIcon: Icon(Icons.person),
-
             label: 'Profile',
           ),
         ],
