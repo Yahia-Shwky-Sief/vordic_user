@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vordic_user/core/widgets/product.dart';
+import 'package:vordic_user/core/widgets/products/product.dart';
 
 productsListView({required context, required title}) => Column(
       children: [
