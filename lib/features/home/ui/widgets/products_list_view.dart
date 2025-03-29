@@ -1,4 +1,6 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:vordic_user/core/models/product.dart';
 import 'package:vordic_user/core/widgets/products/product.dart';
 
 productsListView({required context, required title}) => Column(
@@ -38,7 +40,17 @@ productsListView({required context, required title}) => Column(
             scrollDirection: Axis.horizontal,
             itemCount: 20,
             itemBuilder: (context, index) {
-              return product();
+              //Todo: dummy data, remove this when we get the data from the API
+              int id = Random().nextInt(1000000);
+              return product(
+                  product: Product(
+                    id: id.toString(),
+                    name: 'name',
+                    description: 'description',
+                    price: 100,
+                    imageUrl: 'https://picsum.photos/1000',
+                  ),
+                  context: context);
             },
             separatorBuilder: (context, index) => const SizedBox(width: 10),
           ),
