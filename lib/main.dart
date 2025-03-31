@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:vordic_user/core/theme/theme.dart';
 import 'package:vordic_user/features/onboarding/onboarding.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:vordic_user/firebase_options.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 

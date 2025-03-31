@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "634042147228",
+    "project_id": "vordic-3a688",
+    "storage_bucket": "vordic-3a688.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:634042147228:android:16d9b0848b9bccaf036859",
+        "android_client_info": {
+          "package_name": "com.example.vordic_user"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmnWbS2C09X1S7v0VfKTpPSPEepDHwiFI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
